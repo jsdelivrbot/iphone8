@@ -1,0 +1,52 @@
+.header {
+  &__wrap {
+    background-color: #333;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  padding: 15px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    flex-basis: 20%;
+    & img {
+      display: block;
+    }
+  }
+
+}
+
+.header--btn {
+
+  width: 100%;
+  max-width: 270px;
+}
+.header--share {
+
+  & a {
+    margin-right: 16px;
+  }
+
+}
+
+.header--right {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-basis: 80%;
+  width: 100%;
+
+}

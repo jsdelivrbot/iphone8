@@ -1,0 +1,18 @@
+include helpers/_global_mixins
+include template/_js
+include template/_project_mixins
+block vars
+
+
+doctype
+html(lang="ru")
+  head
+    include template/_head
+  body
+    block content
+    script(src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js")
+    script.
+        AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    script(src=`${SRC + 'js/main.js'}`)

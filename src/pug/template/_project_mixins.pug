@@ -1,0 +1,126 @@
+-
+  var data =
+    [
+      {
+        "number": 1,
+        "title": "GPS-трекер",
+        "text": "Для поиска велосипеда в случае угона. Встроенный GPS-трекер позволит зафиксировать и отследить местоположение велосипеда.",
+        "link": "http://www.ulmart.ru/catalog/93234_21246_251878?sort=0&viewType=1&rec=true"
+      },
+      {
+        "number": 2,
+        "title": "Велокомпьютер",
+        "text": "Для отслеживания скорости, дистанции, общего пробега и времени поездки. Состоит из двух частей соединенных проводом - дисплея, который крепится на руле и датчика скорости.",
+        "link": "http://www.ulmart.ru/catalog/93234_21246_206146"
+      },
+      {
+        "number": 3,
+        "title": "Велокресло",
+        "text": "Для комфортных поездок с ребёнком. Эргономичная конструкция позволяет малышу максимально расслабиться, а заботливых родителей избавляя от лишних переживаний за его состояние.",
+        "link": "http://www.ulmart.ru/catalog/velokresla_1?sort=0&viewType=1&rec=true"
+      }
+    ]
+
+//- red\white and png\svg
+mixin header-logo()
+  .header
+    +a({"href":`${ROOT}`, "class":"header__logo"})
+      img(src=`${URL + 'ulmart-logo-white' + '.svg'}`, width="170"  alt="logo")
+    .header--right
+      .header--share
+          +a({"onclick":"Share.vk('https://www.ulmart.ru/dynamic/page/iphone8_preorder','Предзаказ Iphone 8 - Купи Айфон 8 В Юлмарт','','Старт продаж Apple Iphone 8! Сделай Предзаказ на новый флагман Iphone 8 Первым!')"}) 
+            img(src=`${URL + 'ico-vk' + '.svg'}`, alt="" width="25")
+
+          +a({"onclick":"Share.facebook('https://www.ulmart.ru/dynamic/page/iphone8_preorder','Предзаказ Iphone 8 - Купи Айфон 8 В Юлмарт','','Старт продаж Apple Iphone 8! Сделай Предзаказ на новый флагман Iphone 8 Первым!')"}) 
+            img(src=`${URL + 'ico-fb' + '.svg'}`, alt="" width="25")
+
+          +a({"onclick":"Share.twitter('https://www.ulmart.ru/dynamic/page/iphone8_preorder','Предзаказ Iphone 8 - Купи Айфон 8 В Юлмарт')"}) 
+            img(src=`${URL + 'ico-tw' + '.svg'}`, alt="" width="25")
+
+          +a({"onclick":"Share.ok('https://www.ulmart.ru/dynamic/page/iphone8_preorder','Старт продаж Apple Iphone 8! Сделай Предзаказ на новый флагман Iphone 8 Первым!')"}) 
+            img(src=`${URL + 'ico-ok' + '.svg'}`, alt="" width="25")
+
+          //- +a({"onclick":"Share.mailru('https://www.ulmart.ru/dynamic/page/iphone8_preorder','Предзаказ Iphone 8 - Купи Айфон 8 В Юлмарт','','Старт продаж Apple Iphone 8! Сделай Предзаказ на новый флагман Iphone 8 Первым!')"}) 
+          //-   img(src=`${URL + 'ico-moymir' + '.svg'}`, alt="" width="30")
+      .header--btn
+        a(href="#form" class="subheader__btn subheader__btn--blue") Оформить предзаказ
+
+mixin footer()
+  footer.footer__wrap
+    .container
+      p.footer__text
+        block
+        |  Количество товара ограничено. Приведенное изображение может отличаться от&nbsp;внешнего вида товара в&nbsp;центрах исполнения заказов. Существенная информация&nbsp;— на&nbsp;сайте  
+        +a({"href":`${ROOT}`}) ulmart.ru
+        |.  Категория сайта&nbsp;18+. Непубличное акционерное общество «Юлмарт», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН 1089848006423; ООО&nbsp;«Юлмарт&nbsp;РСК», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН&nbsp;1117847607900.
+
+
+//- //- Товары
+//- mixin goods(data)
+//-     .goods-wrapper
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link", target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", width=`${data.size || '220'}`, class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | !{(data.title)}
+//-         .goods-middle
+//-             .goods-middle__price
+//-                 .goods-middle__retail
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                 .goods-middle__start
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(href=`${data.link}`, class="goods-bottom__link") Купить
+
+//- //- Товары с промокодом и выгодой
+//- mixin goods-promocode(data)
+//-     .goods-wrapper.goods-wrapper-promocode
+//-         .goods-sale
+//-             | Выгода 
+//-             br
+//-             span !{getProfit(data.oldPrice, data.price)}.- 
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link",target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | #{formatTitleAlter(data.title)}
+//-         .goods-promocode
+//-             | Промокод: 
+//-             span #{data.promocode}
+//-         .goods-middle
+//-             .goods-middle__price
+//-                 .goods-middle__retail
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                 .goods-middle__start
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(href=`${data.link}`, class="goods-bottom__link") Купить
+
+//- //- Товары для аукциона
+//- mixin goods-auction(data)
+//-     .goods-wrapper.goods-wrapper-auction
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link",target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | !{(data.title)}
+//-         .goods-middle
+//-             .goods-middle__line
+//-                 .goods-middle__text
+//-                     | Розничная цена
+//-                 .goods-middle__retail-price
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                     //- | !{getProfit(data.oldPrice, data.price)}.-
+//-             .goods-middle__line
+//-                 .goods-middle__text
+//-                     | Стартовая цена
+//-                 .goods-middle__start-price
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(class="goods-bottom__link", href= `${data.link}`) О товаре
+
+
+
+//- Старая цена !{getNumberFormat(data.oldPrice)}
+//- Новая цена !{checkPriceMain(data.oldPrice, data.price)}
+//- Скидка #{getProfit(data.oldPrice,data.price)}

@@ -1,0 +1,175 @@
+.form__wrap {
+  background-color: #ffffff;
+  padding: 7.5rem 0 6rem;
+  text-align: center;
+}
+form {
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto 50px;
+}
+
+select, input[type="text"], input[type="email"] {
+  border: 1px solid #959595;
+  height: 50px;
+  border-radius: 5px;
+  color: #000;
+  width: 286px;
+  display: inline-block;
+  padding: 12px 15px;
+  margin: 10px;
+
+}
+select {
+  padding: 0 0 0 15px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, input[type="email"]:active, textarea:focus, textarea:active {
+  box-shadow: inset 0 0 8px rgba(113, 117, 121, 0.7);
+}
+
+
+.form__btn {
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #333;
+    max-width: 320px;
+    border-radius: 50px;
+    &:hover {
+      opacity: 0.8
+    }
+}
+.label__text {
+  color: #959595;
+  padding-left: 10px;
+  font-size: 18px;
+  text-align: left;
+  a {
+    color: #0074c2;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-row {
+  text-align: center;
+}
+
+.form__title {
+  color: #000;
+  font-size: 4.3rem;
+  line-height: 84px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  // padding: 80px 0 5px;
+}
+
+.form-price {
+    width: 286px;
+    display: inline-block;
+    padding: 12px 15px;
+    margin: 10px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    span {
+      font-weight: 300;
+    }
+}
+.form__text {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 40px;
+  span {
+    font-weight: 700;
+  }
+}
+
+
+
+#toTop {
+  width: 55px;
+  height: 55px;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+  background-color: #fff;
+  box-shadow: 0 5px 13px 0 rgba(0,0,0,.1);
+  z-index: 300;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+  border-radius: 50%;
+  cursor: pointer;
+  @include MQ(xs){
+    bottom: 0;
+    right: 0;
+  }
+  &:before{
+    content:"";
+    display: block;
+    width: 26px;
+    height: 14px;
+    background: url(https://fast.ulmart.ru/ns/verstka/fulfillment/img/arr-top.png) no-repeat;
+    margin: 17px auto 0;
+  }
+}
+
+.form__goods--img {
+  height: 416px;
+  line-height: 416px;
+  vertical-align: bottom;
+  img {
+    vertical-align: bottom;
+  }
+}
+
+
+.form__goods--color--wrap {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form__goods--title {
+  font-size: 26px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 3.7rem;
+  margin-top: 2rem;
+}
+
+.form__goods--color {
+  width: 36px;
+  height: 36px;
+  box-shadow: inset 0 2px 4px rgba(28, 28, 27, 0.2);
+  display: block;
+  border-radius: 50px;
+  margin: 0 9px;
+  &--silver {
+    border: 1px solid #cbcbcb;
+    background-color: #e2e3e4;
+  }
+  &--black {
+    border: 1px solid #000;
+    background-color: #272729;
+  }
+  &--gold {
+    border: 1px solid #e1cab8;
+    background-color: #fceee3;
+  }
+}

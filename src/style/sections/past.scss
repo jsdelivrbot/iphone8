@@ -1,0 +1,22 @@
+.past {
+  &__wrap {
+    background-color: #fafafa;
+    padding-top: 7.5rem;
+    text-align: center;
+  }
+  &--title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  &--desc {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+  }
+  &__img {
+    margin-top: 3rem;
+  }
+}
