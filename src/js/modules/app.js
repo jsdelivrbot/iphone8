@@ -32,3 +32,92 @@ $('#toTop').click(function() {
 //     scrollTop: top
 //   }, 1000);
 // });
+
+
+
+$('.item1').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', true);
+    // $('.form-option__two').attr('selected', false);
+    // $('.form-option__three').attr('selected', false);
+    $(this).addClass("goodsActive");
+    $(".goods--8").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6.png");
+    $('.item2').removeClass("goodsActive");
+    $('.item3').removeClass("goodsActive");
+    $('.item4').removeClass("goodsActive");
+    $('.item5').removeClass("goodsActive");
+    $('.item6').removeClass("goodsActive")
+});
+$('.item2').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', false);
+    // $('.form-option__two').attr('selected', true);
+    // $('.form-option__three').attr('selected', false);
+    $(this).addClass("goodsActive");
+    $(".goods--8").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6-black.png");
+    $('.item1').removeClass("goodsActive");
+    $('.item3').removeClass("goodsActive");
+    $('.item4').removeClass("goodsActive");
+    $('.item5').removeClass("goodsActive");
+    $('.item6').removeClass("goodsActive")
+});
+
+$('.item3').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', false);
+    // $('.form-option__two').attr('selected', false);
+    // $('.form-option__three').attr('selected', true);
+    // $('.form-option__three').attr('selected', 'selected');
+    $(this).addClass("goodsActive");
+    $(".goods--8").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6-gold.png");
+    $('.item2').removeClass("goodsActive");
+    $('.item1').removeClass("goodsActive");
+    $('.item4').removeClass("goodsActive");
+    $('.item5').removeClass("goodsActive");
+    $('.item6').removeClass("goodsActive")
+});
+
+$('.item4').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', false);
+    // $('.form-option__two').attr('selected', false);
+    // $('.form-option__three').attr('selected', true);
+    // $('.form-option__three').attr('selected', 'selected');
+    $(this).addClass("goodsActive");
+    $(".goods--8plus").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6.png");
+    $('.item2').removeClass("goodsActive");
+    $('.item3').removeClass("goodsActive");
+    $('.item1').removeClass("goodsActive");
+    $('.item5').removeClass("goodsActive");
+    $('.item6').removeClass("goodsActive")
+});
+
+$('.item5').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', false);
+    // $('.form-option__two').attr('selected', false);
+    // $('.form-option__three').attr('selected', true);
+    // $('.form-option__three').attr('selected', 'selected');
+    $(this).addClass("goodsActive");
+    $(".goods--8plus").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6-black.png");
+    $('.item2').removeClass("goodsActive");
+    $('.item3').removeClass("goodsActive");
+    $('.item4').removeClass("goodsActive");
+    $('.item1').removeClass("goodsActive");
+    $('.item6').removeClass("goodsActive")
+});
+
+$('.item6').click(function(e){
+    e.preventDefault();
+    // $('.form-option__one').attr('selected', false);
+    // $('.form-option__two').attr('selected', false);
+    // $('.form-option__three').attr('selected', true);
+    // $('.form-option__three').attr('selected', 'selected');
+    $(this).addClass("goodsActive");
+    $(".goods--8plus").attr("src","https://fast.ulmart.ru/ns/verstka/preorder_iphone8/img/6-gold.png");
+    $('.item2').removeClass("goodsActive");
+    $('.item3').removeClass("goodsActive");
+    $('.item4').removeClass("goodsActive");
+    $('.item5').removeClass("goodsActive");
+    $('.item1').removeClass("goodsActive")
+});

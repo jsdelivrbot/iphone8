@@ -160,6 +160,7 @@ input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, 
   display: block;
   border-radius: 50px;
   margin: 0 9px;
+  cursor: pointer;
   &--silver {
     border: 1px solid #cbcbcb;
     background-color: #e2e3e4;
@@ -172,4 +173,8 @@ input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, 
     border: 1px solid #e1cab8;
     background-color: #fceee3;
   }
+}
+
+.goodsActive {
+  border: 2px solid #0b78e8;
 }
